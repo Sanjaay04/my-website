@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjaay.M - Quality Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .nav-link.active {
+            color: #101113;
+            /* Blue color for active link */
+            font-weight: bold;
+            position: relative;
+        }
+
+        .nav-link.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: #2563eb;
+            /* underline effect */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white z-50 shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-gray-900 tracking-tight">
+                        Portfolio
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">Home</a>
+                    <a href="#about"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">About</a>
+                    <a href="#experience"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">Experience</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">Skills</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">Contact</a>
+
+                    <!-- Dropdown -->
+                    <div class="relative group inline-block">
+                    </div>
+                </div>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:block">
+                    <a href="#contact"
+                        class="bg-gray-900 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
+                        Let's Talk
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-gray-900">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-gray-900">About</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-gray-900">Experience</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-gray-900">Skills</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-gray-900">Contact</a>
+
+
+                <div class="px-3 py-2">
+                    <a href="#contact"
+                        class="bg-gray-900 text-white block text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <!-- Hero Section with New Colors -->
+    <section id="home"
+        class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-gray-900 to-gray-800 text-white overflow-hidden">
+        <!-- Decorative Gradient Blobs (updated colors) -->
+        <div class="absolute top-0 left-0 w-1/3 h-1/3 bg-green-400 opacity-30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-1/5 h-1/5 bg-pink-500 opacity-25 rounded-full blur-2xl"></div>
+        <div class="absolute top-10 right-1/4 w-1/4 h-1/4 bg-blue-400 opacity-20 rounded-full blur-2xl"></div>
+
+        <!-- Central Content -->
+        <div class="relative text-center px-6 py-16 animate-fade-in drop-shadow-lg">
+            <!-- Profile Icon (swap for your photo if you wish) -->
+            <div
+                class="w-32 h-32 bg-white/20 rounded-full mx-auto mb-8 flex items-center justify-center shadow-lg backdrop-blur-md border-4 border-green-400">
+                <i class="fas fa-user text-4xl text-white"></i>
+            </div>
+            <!-- Name -->
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-lg text-pink-400">
+                Sanjaay.M
+            </h1>
+            <!-- Title -->
+            <p id="typing-text" class="text-xl md:text-2xl font-medium mb-6 text-green-400 italic"></p>
+            <!-- Description -->
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-blue-200 leading-relaxed">
+                Passionate about ensuring software quality through comprehensive testing strategies, automation
+                frameworks, and continuous improvement.
+            </p>
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact"
+                    class="bg-green-400 text-neutral-900 px-8 py-3 rounded-full font-semibold shadow-md hover:bg-green-500 transition-colors duration-200">
+                    Get In Touch
+                </a>
+                <a href="#experience"
+                    class="border-2 border-pink-400 text-pink-400 px-8 py-3 rounded-full font-semibold shadow-md hover:bg-pink-400 hover:text-neutral-900 transition-colors duration-200">
+                    View Experience
+                </a>
+            </div>
+        </div>
+        <!-- Animated Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-80">
+            <span class="animate-bounce text-green-400 text-3xl">&#x2193;</span>
+        </div>
+    </section>
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-white via-blue-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-800 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Text -->
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        I'm a dedicated <span class="font-semibold text-blue-600">Quality Analyst</span> with
+                        <strong>1+ years</strong> of hands-on experience in <strong>manual</strong> and
+                        <strong>automated testing</strong>.
+                        Currently working at <strong>Tecnozard Private Limited</strong>, I ensure exceptional
+                        software quality by blending precision testing with modern methodologies.
+                    </p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        My expertise includes <strong>functional testing</strong>,
+                        <strong>regression testing</strong>, <strong>API validation</strong>, and
+                        <strong>test automation frameworks</strong>.
+                        I’m passionate about leveraging AI-powered tools to improve efficiency and
+                        deliver flawless user experiences.
+                    </p>
+
+                    <!-- Contact Details -->
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-2 group">
+                            <i class="fas fa-envelope text-blue-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-gray-700">sanjaaymanju@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2 group">
+                            <i class="fas fa-phone text-blue-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-gray-700">+91-9597658755</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/sanjaay-m" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center space-x-2 group hover:text-blue-700 transition-colors">
+                            <i class="fab fa-linkedin text-blue-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-gray-700 group-hover:text-blue-700">Sanjaay.M</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Quick Facts -->
+                <div
+                    class="bg-white shadow-lg border border-gray-200 p-8 rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">Quick Facts</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Current Role:</span>
+                            <span class="font-semibold text-gray-900">Quality Analyst</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold text-gray-900">1+ Years</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Education:</span>
+                            <span class="font-semibold text-gray-900">B.Tech Mechanical</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold text-gray-900">Test Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Professional Experience</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="space-y-8">
+                <!-- Current Role -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Quality Analyst</h3>
+                            <p class="text-blue-600 font-semibold text-lg">Tecnozard Private Limited</p>
+                        </div>
+                        <div class="text-gray-500 font-medium mt-2 md:mt-0">
+                            <i class="fas fa-calendar-alt mr-2"></i>Feb 2025 - Present
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Utilizing modern AI-powered tools to generate test cases based on requirements, improving
+                            test coverage, enhancing efficiency, and minimizing manual effort.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Performing manual testing to ensure product quality, identify defects, and verify that
+                            functionality meets business requirements.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Creating and maintaining detailed test documentation including test plans, test cases, and
+                            defect reports for effective tracking and communication.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Performing regression testing to ensure that recent code changes do not negatively impact
+                            existing features or workflows.
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Previous Role -->
+                <!-- Previous Role -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Software Testing Executive</h3>
+                            <p class="text-blue-600 font-semibold text-lg">Thikse Software Solution</p>
+                        </div>
+                        <div class="text-gray-500 font-medium mt-2 md:mt-0">
+                            <i class="fas fa-calendar-alt mr-2"></i>Jul 2024 - Feb 2025
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Proficient in using REST Assured for building robust and scalable API test automation
+                            frameworks.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Led end-to-end testing efforts for projects, including API integration testing to validate
+                            seamless data flow and functionality between systems.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Lead the testing efforts for projects, identifying defects, conducting regression tests, and
+                            ensuring timely release of high-quality software.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Utilized industry leading tools such as Jira Software for comprehensive defect tracking,
+                            test case management, and agile project workflows.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Actively involved in HRMS and ATS Research and development, contributing to feature
+                            enhancement, usability improvements, and aligning the systems with industry best practices.
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Internship -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Software Testing Intern</h3>
+                            <p class="text-blue-600 font-semibold text-lg">Inmakers Infotech Pvt Ltd</p>
+                        </div>
+                        <div class="text-gray-500 font-medium mt-2 md:mt-0">
+                            <i class="fas fa-calendar-alt mr-2"></i>Dec 2023 - Mar 2024
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Created and executed Test cases using Selenium WebDriver and TestNG
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Implemented Page Object Model design pattern for maintainable test scripts
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Conducted API testing using Postman for backend service validation
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Explored mobile application testing using Appium for cross-platform compatibility
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Technical Skills</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Testing Tools -->
+                <div class="bg-gray-50 rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-vial text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Testing Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span
+                            class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">TestNG</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">API
+                            Automation</span>
+                        <span
+                            class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Cucumber</span>
+                    </div>
+                </div>
+                <!-- Tools & Methods -->
+                <div class="bg-gray-50 rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tools text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Tools & Methods</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Manual
+                            Testing</span>
+                        <span
+                            class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Java</span>
+                        <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">GitLab
+                            CI</span>
+                        <span
+                            class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Jira</span>
+                        <span
+                            class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Postman</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tools text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">CI/CD Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">GitLab
+                            CI</span>
+                        <span
+                            class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Java</span>
+                        <span
+                            class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Jira</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Education & Certifications -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Education & Certifications</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Education Card -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education
+                    </h3>
+                    <div class="relative pl-6 border-l-4 border-blue-600 space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Bachelor of Technology</h4>
+                            <p class="text-blue-600">Mechanical Engineering</p>
+                            <p class="text-gray-600">Manakula Vinayagar Institute of Technology</p>
+                            <span
+                                class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mt-2">2018
+                                - 2022</span>
+                            <p class="text-sm text-gray-500 mt-1">CGPA: 7.6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Card -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-certificate text-green-600 mr-3"></i> Certifications
+                    </h3>
+                    <div class="relative pl-6 border-l-4 border-green-600 space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Software Testing Internship</h4>
+                            <p class="text-green-600">Inmakes Infotech Private Limited</p>
+                            <p class="text-gray-600">Comprehensive training in manual and automated testing</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-gray-900 mb-1">Current Learning</h4>
+                            <p class="text-gray-600">Full Stack Development with focus on Backend technologies including
+                                MySQL, Java, and PHP Laravel</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Get In Touch</h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+            <p class="text-lg text-gray-600 mt-6">
+                Let’s connect and explore opportunities in <span class="font-semibold text-blue-600">Quality
+                    Assurance</span>
+                or collaborate on impactful testing projects.
+            </p>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Email Card -->
+            <div
+                class="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto bg-blue-100 rounded-full mb-4">
+                    <i class="fas fa-envelope text-2xl text-blue-600"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-1">Email</h3>
+                <p class="text-gray-600">sanjaaymanju@gmail.com</p>
+            </div>
+
+            <!-- Phone Card -->
+            <div
+                class="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto bg-green-100 rounded-full mb-4">
+                    <i class="fas fa-phone text-2xl text-green-600"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-1">Phone</h3>
+                <p class="text-gray-600">+91-9597658755</p>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/sanjaay-m" target="_blank" rel="noopener noreferrer"
+               class="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto bg-blue-100 rounded-full mb-4">
+                    <i class="fab fa-linkedin text-2xl text-blue-700"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-1">LinkedIn</h3>
+                <p class="text-gray-600">Sanjaay.M</p>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/Sanjaay04" target="_blank" rel="noopener noreferrer"
+               class="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto bg-gray-100 rounded-full mb-4">
+                    <i class="fab fa-github text-2xl text-gray-800"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-1">GitHub</h3>
+                <p class="text-gray-600">Sanjaay</p>
+            </a>
+        </div>
+
+        <!-- Send Message Button -->
+        <div class="text-center">
+            <a href="mailto:sanjaaymanju@gmail.com"
+                class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 hover:shadow-lg transition-all duration-300 inline-flex items-center">
+                <i class="fas fa-paper-plane mr-2"></i>
+                Send Message
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        //navactive
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            function setActiveLink() {
+                let scrollY = window.scrollY;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 80; // adjust for navbar height
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute("id");
+
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === `#${sectionId}`) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", setActiveLink);
+        });
+        // Animate skill bars on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe skills section
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+        //Typing effect
+        const text = "Quality Analyst";
+        let index = 0;
+        const speed = 100; // typing speed in ms
+
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, speed);
+            }
+        }
+
+        // Start typing when the page loads
+        window.onload = typeEffect;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            function setActiveLink() {
+                let scrollY = window.scrollY;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 80; // adjust for navbar height
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute("id");
+
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === `#${sectionId}`) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", setActiveLink);
+        });
+
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96c60f16e4807f46',t:'MTc1NDcyOTk4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
